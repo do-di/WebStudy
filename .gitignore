@@ -1,0 +1,56 @@
+# Ignore Visual Studio temporary files, build results, and
+# folder containing project binaries.
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]emp/
+
+# Ignore Visual Studio folder
+.vs/
+
+# Ignore Rider files
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore .NET specific files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Ignore MacOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Ignore Rider IDE
