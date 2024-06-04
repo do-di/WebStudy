@@ -1,6 +1,7 @@
 ﻿using Application.Usecase.GetListPost;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Application.Models;
 
 namespace WebAPI.Controllers
 {
@@ -14,11 +15,17 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("")]
-        public async Task<IActionResult> GetPostsAsync()
+        public async Task<IActionResult> GetListPost()
         {
             var query = new GetListPostQuery();
             var result = await mediator.Send(query).ConfigureAwait(false);
             return Ok(result);
+        }
+        
+        [HttpPost()]
+        public IActionResult CreatePost(CreatePostRequest request)
+        {
+            return Ok();
         }
     }
 }
