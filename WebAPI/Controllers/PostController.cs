@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Application.Models;
+using Application.Usecase.CreatePost;
 
 namespace WebAPI.Controllers
 {
@@ -25,7 +26,13 @@ namespace WebAPI.Controllers
         [HttpPost()]
         public IActionResult CreatePost(CreatePostRequest request)
         {
-            return Ok();
+            var command = new CreatePostCommand()
+            {
+                Title = request.Title,
+                File = request.File,
+            };
+            var result = mediator.Send(command);
+            return Ok(result);
         }
     }
 }
