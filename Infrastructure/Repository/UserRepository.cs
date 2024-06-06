@@ -1,8 +1,9 @@
 ﻿using Domain.Entities;
+using Domain.Interface.Repository;
 
 namespace Infrastructure.Repository
 {
-    public class UserRepository : Repository<UserEntity>
+    public class UserRepository : Repository<UserEntity>, IUserRepository
     {
         private readonly ApplicationDbContext applicationDbContext;
 
