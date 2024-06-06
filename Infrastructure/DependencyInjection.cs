@@ -1,9 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using Domain.Interface.Storage;
 using Infrastructure.Storage;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
+using Domain.Interface.Repository;
+using Infrastructure.Repository;
 
 namespace Infrastructure
 {
@@ -17,6 +17,7 @@ namespace Infrastructure
                 "5BpjEwA0J760MC2eVuW9Gt6gvALuxcP5J3RMvRQHPxKUB8JrHHLldiqpkBfFrvan6iEX2x5tRceeACDb1fk7Yw==",
                 databaseName: "DoDiCosmos")
             );
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
     }
