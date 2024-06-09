@@ -4,6 +4,7 @@ using Infrastructure.Storage;
 using Microsoft.EntityFrameworkCore;
 using Domain.Interface.Repository;
 using Infrastructure.Repository;
+using StackExchange.Redis;
 
 namespace Infrastructure
 {
@@ -17,6 +18,7 @@ namespace Infrastructure
                 "5BpjEwA0J760MC2eVuW9Gt6gvALuxcP5J3RMvRQHPxKUB8JrHHLldiqpkBfFrvan6iEX2x5tRceeACDb1fk7Yw==",
                 databaseName: "DoDiCosmos")
             );
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
