@@ -11,6 +11,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationService();
 builder.Services.AddInfrastructureService();
 
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(builder.Configuration["CacheConnection"] ?? string.Empty));
+builder.Services.AddHttpClient();
+
 var app = builder.Build();
 
 app.UseSwagger();

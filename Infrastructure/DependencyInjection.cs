@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Domain.Interface.Repository;
 using Infrastructure.Repository;
 using StackExchange.Redis;
+using Domain.Interface.Cache;
+using Infrastructure.Cache;
 
 namespace Infrastructure
 {
@@ -20,6 +22,7 @@ namespace Infrastructure
             );
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddSingleton<IRedisCache, RedisCache>();
             return services;
         }
     }
