@@ -15,6 +15,12 @@ namespace Infrastructure.Repository
             UserRepository = new UserRepository(context);
         }
 
+        public UnitOfWork()
+        {
+            this.context = new ApplicationDbContext(null);
+            UserRepository = new UserRepository(context);
+        }
+
         public void SaveChanges()
         {
             context.SaveChanges();

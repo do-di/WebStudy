@@ -8,7 +8,7 @@ namespace Application.Profiles
     {
         public UserProfile()
         {
-            CreateMap<UserEntity, UserDto>();
+            CreateMap<User, UserDto>();
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Domain.Interface.Repository
 {
-    public interface IUserRepository : IRepository<User>
+    public interface IStaticUserRepository
     {
         void Create(User user);
         List<User> GetAll();
